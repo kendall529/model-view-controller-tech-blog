@@ -1,0 +1,44 @@
+<section id="login">
+  <div class="login-container">
+    <div class="login-card">
+      <h2 class="is-size-3 p-2">Login</h2>
+
+      <form class="login-form">
+        <div class="form-group">
+          {{!-- <label for="email-login">email:</label> --}}
+          <input class="input mb-3" type="text" id="username-login" placeholder="username" />
+        </div>
+        <div class="form-group">
+          {{!-- <label for="password-login">password:</label> --}}
+          <input class="input mb-3" type="password" id="password-login" placeholder="password" />
+        </div>
+        <div class="form-group">
+          <button class="button has-background-info-dark" type="submit">login</button>
+        </div>
+        <div id="login-fail" class="has-text-danger"></div>
+      </form>
+    </div>
+    <hr class="hr">
+    <div class="login-card">
+      <h2 class="is-size-3 mt-4 p-2">Signup</h2>
+
+      <form class="signup-form">
+
+        <div class="form-group">
+          <input class="input mb-3" type="text" id="username-signup" placeholder="user-name" />
+        </div>
+        <div class="form-group">
+          <input class="input mb-3" type="password" id="password-signup" placeholder="password" />
+        </div>
+
+        <div class="form-group">
+          <button class="button has-background-info-dark" type="submit">submit</button>
+        </div>
+
+        <div id="signup-fail" class="has-text-danger"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="./js/login.js"></script>
