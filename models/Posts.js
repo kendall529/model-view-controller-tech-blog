@@ -19,7 +19,7 @@ Posts.init (
 
         },
 
-        content: {
+        post_content: {
             type: DataTypes.STRING,
             allowNull: false,
         },

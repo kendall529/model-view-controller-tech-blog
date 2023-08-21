@@ -7,16 +7,16 @@ const messageFormHandler = async (event) => {
     if (post_title && post_contents &&  post_date) {
         const response = await fetch('/api/groups', {
             method: 'POST',
-            body: JSON.stringify({ group_name, group_description, topic_id, skill_level, zoom_link, meet_time }),
+            body: JSON.stringify({ post_title, post_contents, post_date, }),
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
             document.location.replace('/profile');
         } else {
-            document.querySelector("#group-fail").textContent = "One or more fields has invalid input";
+            document.querySelector("#post-fail").textContent = "One or more fields has invalid input";
         }
     } else {
-        document.querySelector("#group-fail").textContent = "Cannot leave any fields empty";
+        document.querySelector("#post-fail").textContent = "Cannot leave any fields empty";
     }
 };
 
